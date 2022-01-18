@@ -6,7 +6,7 @@ export const CoinContext = createContext([]);
 const CoinContextProvider = (props) => {
   const [group, setGroup] = useState([]);
 
-  useEffect(async () => {
+  const fetchData = async () => {
     const ids = (await contract.getGroupIds()) || [];
     const groups = [];
 
@@ -29,6 +29,10 @@ const CoinContextProvider = (props) => {
         });
       });
     });
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
 
   return (

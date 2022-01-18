@@ -6,7 +6,7 @@ function CardItem({ data }) {
     <article className="currency-card">
       <h6 className="currency-card__name">{data[0]}</h6>
       <h6 className="currency-card__rate">
-        {hexToDecimal(data["usdPriceInCents"]._hex) / 100}
+        ${hexToDecimal(data["usdPriceInCents"]._hex) / 100} / 1 ETH
       </h6>
 
       <div className="currency-card__footer">

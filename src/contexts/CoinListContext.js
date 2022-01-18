@@ -11,7 +11,8 @@ const CoinContextProvider = (props) => {
     const groups = [];
 
     for (const id of ids) {
-      groups.push(await contract.getGroup(id));
+      const response = await contract.getGroup(id);
+      groups.push(response);
     }
 
     groups.forEach((el) => {

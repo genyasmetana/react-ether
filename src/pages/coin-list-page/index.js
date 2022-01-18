@@ -5,7 +5,7 @@ import "./coinListPage.scss";
 export default function CoinListPage() {
   return (
     <CoinContextProvider>
-      <h1 className="title">All Indeces</h1>
+      <h1 className="title">All Indices</h1>
       <CardList />
     </CoinContextProvider>
   );

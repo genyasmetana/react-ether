@@ -1,0 +1,23 @@
+@import "../../../resources/styles/media";
+
+.card-block {
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 40px 0 16px;
+  }
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+
+  @include media(min, sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media(min, md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
